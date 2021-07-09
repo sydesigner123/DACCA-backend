@@ -7,4 +7,14 @@ module.exports = ({ env }) => ({
       api_secret: env("CLOUDINARY_SECRET"),
     },
   },
+  email: {
+    provider: "sendgrid",
+    providerOptions: {
+      apiKey: env("SENDGRID_API_KEY"),
+    },
+    settings: {
+      defaultFrom: "gary@socialmindr.com",
+      defaultReplyTo: "gary@socialmindr.com",
+    },
+  },
 });
