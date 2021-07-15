@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_structure_headers",
+  "info": {
+    "name": "Header",
+    "icon": "ad",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Cover": {
+      "type": "component",
+      "repeatable": false,
+      "component": "structure.hero"
+    },
+    "Subtitle": {
+      "type": "string"
+    }
+  }
+}

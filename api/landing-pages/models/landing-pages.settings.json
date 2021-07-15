@@ -1,9 +1,9 @@
 {
   "kind": "collectionType",
-  "collectionName": "Test",
+  "collectionName": "landing_pages",
   "info": {
-    "name": "Test",
-    "description": ""
+    "name": "Landing Pages",
+    "description": "test"
   },
   "options": {
     "increments": true,
@@ -12,12 +12,25 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "Title": {
       "type": "string",
       "required": true,
       "unique": true
     },
-    "cover": {
+    "slug": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "Subtitle": {
+      "type": "string"
+    },
+    "Support": {
+      "type": "text",
+      "required": false,
+      "maxLength": 350
+    },
+    "image": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -27,12 +40,11 @@
       "required": true,
       "pluginOptions": {}
     },
-    "content": {
-      "type": "richtext",
-      "required": true
+    "sectors": {
+      "collection": "sector"
     },
-    "published_date": {
-      "type": "datetime"
+    "similar_projects": {
+      "collection": "projects"
     }
   }
 }

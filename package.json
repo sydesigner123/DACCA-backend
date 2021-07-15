@@ -10,6 +10,7 @@
     "strapi": "strapi"
   },
   "dependencies": {
+    "slugify": "^1.5.3",
     "strapi": "3.6.5",
     "strapi-admin": "3.6.5",
     "strapi-connector-mongoose": "3.6.5",

@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags",
+  "info": {
+    "name": "Tags",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "Sector",
+        "ConstructionStatus",
+        "Concept",
+        "Keyword",
+        "Group"
+      ]
+    },
+    "Articles": {
+      "via": "tags",
+      "collection": "article"
+    },
+    "projects": {
+      "via": "tags",
+      "collection": "projects"
+    }
+  }
+}

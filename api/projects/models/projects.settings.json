@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "name": "Projects",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "Conceptualisation",
+        "InConstruction",
+        "Completed"
+      ],
+      "required": true
+    },
+    "Support": {
+      "type": "text",
+      "maxLength": 350
+    },
+    "Cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "Completed": {
+      "type": "richtext"
+    },
+    "Design": {
+      "type": "richtext"
+    },
+    "Technical": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "tags": {
+      "collection": "tags",
+      "via": "projects",
+      "dominant": true
+    },
+    "sector": {
+      "model": "sector"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_structure_heroes",
+  "info": {
+    "name": "Hero",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "Cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "Support": {
+      "type": "text",
+      "maxLength": 350
+    }
+  }
+}
