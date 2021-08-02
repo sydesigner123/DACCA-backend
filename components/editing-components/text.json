@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_editing_components_texts",
+  "info": {
+    "name": "Text",
+    "icon": "align-center",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    }
+  }
+}

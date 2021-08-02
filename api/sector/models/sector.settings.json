@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "sectors",
   "info": {
-    "name": "Sector",
+    "name": "sector",
     "description": ""
   },
   "options": {
@@ -16,6 +16,35 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "projects": {
+      "via": "sector",
+      "collection": "projects"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "subsectors": {
+      "via": "sector",
+      "collection": "subsector"
+    },
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "support": {
+      "type": "text"
     }
   }
 }

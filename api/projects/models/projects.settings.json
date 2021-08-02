@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "projects",
   "info": {
-    "name": "Projects",
+    "name": "project",
     "description": ""
   },
   "options": {
@@ -12,30 +12,16 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string",
       "required": true,
       "unique": true
     },
-    "Slug": {
-      "type": "string",
-      "required": true,
-      "unique": true
-    },
-    "Status": {
-      "type": "enumeration",
-      "enum": [
-        "Conceptualisation",
-        "InConstruction",
-        "Completed"
-      ],
-      "required": true
-    },
-    "Support": {
+    "support": {
       "type": "text",
       "maxLength": 350
     },
-    "Cover": {
+    "cover": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -45,29 +31,52 @@
       "required": true,
       "pluginOptions": {}
     },
-    "Completed": {
-      "type": "richtext"
-    },
-    "Design": {
-      "type": "richtext"
-    },
-    "Technical": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
-    },
     "tags": {
       "collection": "tags",
       "via": "projects",
       "dominant": true
     },
     "sector": {
+      "via": "projects",
       "model": "sector"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "introduction": {
+      "type": "dynamiczone",
+      "components": [
+        "editing-components.image",
+        "editing-components.image-row",
+        "editing-components.text",
+        "editing-components.image-gallery"
+      ]
+    },
+    "conceptAndDesign": {
+      "type": "dynamiczone",
+      "components": [
+        "editing-components.image-row",
+        "editing-components.image",
+        "editing-components.text",
+        "editing-components.image-gallery"
+      ]
+    },
+    "technical": {
+      "type": "dynamiczone",
+      "components": [
+        "editing-components.image-row",
+        "editing-components.image",
+        "editing-components.text",
+        "editing-components.image-gallery"
+      ]
+    },
+    "projectStatus": {
+      "model": "project-status"
+    },
+    "subsector": {
+      "model": "subsector",
+      "via": "projectsList"
     }
   }
 }

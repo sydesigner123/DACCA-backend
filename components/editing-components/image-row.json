@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_editing_components_image_grid",
+  "info": {
+    "name": "Image in Grid",
+    "icon": "images",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "images": {
+      "type": "component",
+      "repeatable": true,
+      "component": "editing-components.image"
+    }
+  }
+}

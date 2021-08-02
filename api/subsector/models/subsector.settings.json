@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subsectors",
+  "info": {
+    "name": "subsector",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "sector": {
+      "via": "subsectors",
+      "model": "sector"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "projects": {
+      "collection": "projects"
+    },
+    "projectsList": {
+      "via": "subsector",
+      "collection": "projects"
+    }
+  }
+}
