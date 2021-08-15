@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_editing_components_pull_quotes",
+  "info": {
+    "name": "Pull Quote",
+    "icon": "align-center",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "quote": {
+      "type": "text"
+    }
+  }
+}

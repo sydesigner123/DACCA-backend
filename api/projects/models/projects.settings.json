@@ -21,16 +21,6 @@
       "type": "text",
       "maxLength": 350
     },
-    "cover": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": true,
-      "pluginOptions": {}
-    },
     "tags": {
       "collection": "tags",
       "via": "projects",
@@ -50,7 +40,8 @@
         "editing-components.image",
         "editing-components.image-row",
         "editing-components.text",
-        "editing-components.image-gallery"
+        "editing-components.image-gallery",
+        "editing-components.asymmetricimages-in-row"
       ]
     },
     "conceptAndDesign": {
@@ -59,7 +50,8 @@
         "editing-components.image-row",
         "editing-components.image",
         "editing-components.text",
-        "editing-components.image-gallery"
+        "editing-components.image-gallery",
+        "editing-components.asymmetricimages-in-row"
       ]
     },
     "technical": {
@@ -68,15 +60,37 @@
         "editing-components.image-row",
         "editing-components.image",
         "editing-components.text",
-        "editing-components.image-gallery"
+        "editing-components.image-gallery",
+        "editing-components.asymmetricimages-in-row"
       ]
     },
     "projectStatus": {
       "model": "project-status"
     },
     "subsector": {
-      "model": "subsector",
-      "via": "projectsList"
+      "via": "projects",
+      "model": "subsector"
+    },
+    "gallerySubtitle": {
+      "type": "string"
+    },
+    "thumbnailSubtitle": {
+      "type": "string"
+    },
+    "thumbnailImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "cover": {
+      "type": "component",
+      "repeatable": false,
+      "component": "editing-components.image"
     }
   }
 }

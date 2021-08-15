@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_editing_components_headings",
+  "info": {
+    "name": "Heading",
+    "icon": "heading"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    }
+  }
+}

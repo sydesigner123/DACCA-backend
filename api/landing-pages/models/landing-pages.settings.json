@@ -46,9 +46,16 @@
       "targetField": "Title",
       "required": true
     },
-    "content": {
-      "type": "richtext",
-      "default": "content"
+    "body": {
+      "type": "dynamiczone",
+      "components": [
+        "editing-components.heading",
+        "editing-components.image-gallery",
+        "editing-components.image-row",
+        "editing-components.image",
+        "editing-components.text",
+        "editing-components.asymmetricimages-in-row"
+      ]
     }
   }
 }

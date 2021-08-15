@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_editing_components_asymmetric_images_in_rows",
+  "info": {
+    "name": "Asymmetric Images in Row",
+    "icon": "table",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "component",
+      "repeatable": true,
+      "component": "editing-components.image"
+    }
+  }
+}

@@ -26,9 +26,6 @@
       "targetField": "title"
     },
     "projects": {
-      "collection": "projects"
-    },
-    "projectsList": {
       "via": "subsector",
       "collection": "projects"
     }
