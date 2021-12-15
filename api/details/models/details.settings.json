@@ -1,0 +1,34 @@
+{
+  "kind": "singleType",
+  "collectionName": "details",
+  "info": {
+    "name": "Details",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tonyEmail": {
+      "type": "string"
+    },
+    "tonyNumber": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "daccaArchitectureInstagramLink": {
+      "type": "string"
+    },
+    "daccaGroupSiteLink": {
+      "type": "string"
+    },
+    "daccaArchitectureSiteLink": {
+      "type": "string"
+    }
+  }
+}
