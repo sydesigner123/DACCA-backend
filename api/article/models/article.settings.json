@@ -44,7 +44,8 @@
         "editing-components.image-row",
         "editing-components.image",
         "editing-components.text",
-        "editing-components.pull-quote"
+        "editing-components.pull-quote",
+        "editing-components.rich-text"
       ]
     },
     "cover": {
@@ -55,6 +56,11 @@
     "introduction": {
       "type": "text",
       "required": true
+    },
+    "thumbnail": {
+      "type": "component",
+      "repeatable": false,
+      "component": "editing-components.image"
     }
   }
 }
