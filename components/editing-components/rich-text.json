@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_editing_components_rich_texts",
+  "info": {
+    "name": "Rich text",
+    "icon": "at",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "richText": {
+      "type": "richtext"
+    }
+  }
+}

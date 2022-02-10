@@ -56,6 +56,15 @@
         "editing-components.text",
         "editing-components.asymmetricimages-in-row"
       ]
+    },
+    "journalReel": {
+      "collection": "article"
+    },
+    "conversationArticle": {
+      "model": "article"
+    },
+    "group_articles": {
+      "collection": "article"
     }
   }
 }
